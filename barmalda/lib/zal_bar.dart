@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:barmalda/butilka_model.dart';
 import 'package:barmalda/ekri/gla_ekr.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,87 @@ import 'package:webview_flutter/webview_flutter.dart';
 class ZalBar extends StatefulWidget {
   final int typeBar;
   const ZalBar({required this.typeBar, super.key});
+  bool eqBut0(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut1(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut2(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut3(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut4(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut5(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut6(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut7(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut8(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut9(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+
 
   @override
   State<ZalBar> createState() => _ZalBarState();

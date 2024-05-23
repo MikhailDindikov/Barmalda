@@ -16,7 +16,87 @@ import 'package:intl/intl.dart';
 
 class BarmanEkr extends StatefulWidget {
   final int barSec;
-  const BarmanEkr({required this.barSec, super.key});
+  const BarmanEkr({required this.barSec, super.key});bool eqBut0(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut1(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut2(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut3(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut4(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut5(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut6(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut7(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut8(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+bool eqBut9(
+    ButilkaModel other,
+    ButilkaModel other1,
+  ) =>
+      other.butType == other1.butType &&
+      other.butCol[0] == other1.butCol[0] &&
+      other.butCol[1] == other1.butCol[1] &&
+      other.butCol[2] == other1.butCol[2];
+
 
   @override
   State<BarmanEkr> createState() => _BarmanEkrState();
