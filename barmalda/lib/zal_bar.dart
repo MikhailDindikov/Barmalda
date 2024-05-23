@@ -7,8 +7,22 @@ import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ZalBar extends StatefulWidget {
+  final ButilkaModel? bultilka1;
+  final ButilkaModel? bultilka2;
+  final ButilkaModel? bultilka3;
+  final ButilkaModel? bultilka4;
+  final ButilkaModel? bultilka5;
+  final ButilkaModel? bultilka6;
   final int typeBar;
-  const ZalBar({required this.typeBar, super.key});
+  const ZalBar(
+      {required this.typeBar,
+      super.key,
+      this.bultilka1,
+      this.bultilka2,
+      this.bultilka3,
+      this.bultilka4,
+      this.bultilka5,
+      this.bultilka6});
   bool eqBut0(
     ButilkaModel other,
     ButilkaModel other1,
@@ -17,7 +31,7 @@ class ZalBar extends StatefulWidget {
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut1(
+  bool eqBut1(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -25,7 +39,7 @@ bool eqBut1(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut2(
+  bool eqBut2(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -33,7 +47,7 @@ bool eqBut2(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut3(
+  bool eqBut3(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -41,7 +55,7 @@ bool eqBut3(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut4(
+  bool eqBut4(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -49,7 +63,7 @@ bool eqBut4(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut5(
+  bool eqBut5(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -57,7 +71,7 @@ bool eqBut5(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut6(
+  bool eqBut6(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -65,7 +79,7 @@ bool eqBut6(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut7(
+  bool eqBut7(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -73,7 +87,7 @@ bool eqBut7(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut8(
+  bool eqBut8(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -81,7 +95,7 @@ bool eqBut8(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut9(
+  bool eqBut9(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -89,7 +103,6 @@ bool eqBut9(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-
 
   @override
   State<ZalBar> createState() => _ZalBarState();
@@ -160,7 +173,9 @@ class _ZalBarState extends State<ZalBar> {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
                     children: [
-                      SizedBox(height: 12,),
+                      SizedBox(
+                        height: 12,
+                      ),
                       Row(
                         children: [
                           GestureDetector(

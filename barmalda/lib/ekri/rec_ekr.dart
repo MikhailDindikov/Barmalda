@@ -13,7 +13,13 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class RecEkr extends StatefulWidget {
-  const RecEkr({super.key});
+  final ButilkaModel? bultilka1;
+  final ButilkaModel? bultilka2;
+  final ButilkaModel? bultilka3;
+  final ButilkaModel? bultilka4;
+  final ButilkaModel? bultilka5;
+  final ButilkaModel? bultilka6;
+  const RecEkr({super.key, this.bultilka1, this.bultilka2, this.bultilka3, this.bultilka4, this.bultilka5, this.bultilka6});
   bool eqBut0(
     ButilkaModel other,
     ButilkaModel other1,
