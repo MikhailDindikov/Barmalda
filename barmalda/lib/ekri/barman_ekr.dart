@@ -1177,7 +1177,11 @@ class _BarmanEkrState extends State<BarmanEkr> with TickerProviderStateMixin {
                   ),
                 ),
                 Positioned(
-                  right: 60,
+                  right: rao.last == 'bc_g'
+                      ? 20
+                      : rao.last == 'bl_g'
+                          ? 10
+                          : 80,
                   top: (Get.height) / 7,
                   child: AnimatedOpacity(
                     duration: 150.ms,

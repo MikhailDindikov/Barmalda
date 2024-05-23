@@ -128,10 +128,10 @@ class _ZalBarState extends State<ZalBar> {
       )
       ..loadRequest(Uri.parse(
         widget.typeBar == 0
-            ? 'https://sites.google.com/view/luna-eai-sia/support'
+            ? 'https://sites.google.com/view/barmen-jas/support-form?authuser=0'
             : widget.typeBar == 1
-                ? 'https://www.termsfeed.com/live/16aa9929-9580-471a-95a3-ce2d9b4faddc'
-                : 'https://www.termsfeed.com/live/af7185f9-9687-44a7-9ac4-0ae466666801',
+                ? 'https://sites.google.com/view/barmen-jas/terms-conditions?authuser=0'
+                : 'https://sites.google.com/view/barmen-jas/privacy-policy?authuser=0',
       ));
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {

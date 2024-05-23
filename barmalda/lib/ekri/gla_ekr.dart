@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:apphud/apphud.dart';
+import 'package:apphud/models/apphud_models/apphud_composite_model.dart';
 import 'package:barmalda/butilka_model.dart';
 import 'package:barmalda/dicso_co.dart';
 import 'package:barmalda/disco.dart';
@@ -12,6 +14,7 @@ import 'package:barmalda/zal_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 
 class GlaErk extends StatefulWidget {
@@ -21,7 +24,14 @@ class GlaErk extends StatefulWidget {
   final ButilkaModel? bultilka4;
   final ButilkaModel? bultilka5;
   final ButilkaModel? bultilka6;
-  const GlaErk({super.key, this.bultilka1, this.bultilka2, this.bultilka3, this.bultilka4, this.bultilka5, this.bultilka6});
+  const GlaErk(
+      {super.key,
+      this.bultilka1,
+      this.bultilka2,
+      this.bultilka3,
+      this.bultilka4,
+      this.bultilka5,
+      this.bultilka6});
 
   bool eqBut0(
     ButilkaModel other,
@@ -31,7 +41,7 @@ class GlaErk extends StatefulWidget {
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut1(
+  bool eqBut1(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -39,7 +49,7 @@ bool eqBut1(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut2(
+  bool eqBut2(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -47,7 +57,7 @@ bool eqBut2(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut3(
+  bool eqBut3(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -55,7 +65,7 @@ bool eqBut3(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut4(
+  bool eqBut4(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -63,7 +73,7 @@ bool eqBut4(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut5(
+  bool eqBut5(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -71,7 +81,7 @@ bool eqBut5(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut6(
+  bool eqBut6(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -79,7 +89,7 @@ bool eqBut6(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut7(
+  bool eqBut7(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -87,7 +97,7 @@ bool eqBut7(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut8(
+  bool eqBut8(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -95,7 +105,7 @@ bool eqBut8(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-bool eqBut9(
+  bool eqBut9(
     ButilkaModel other,
     ButilkaModel other1,
   ) =>
@@ -103,7 +113,6 @@ bool eqBut9(
       other.butCol[0] == other1.butCol[0] &&
       other.butCol[1] == other1.butCol[1] &&
       other.butCol[2] == other1.butCol[2];
-
 
   @override
   State<GlaErk> createState() => _GlaErkState();
@@ -295,10 +304,13 @@ class _GlaErkState extends State<GlaErk> {
   }
 
   void _pepmemum() {
+    RxBool prBarLo = false.obs;
+    RxBool puBarLo = false.obs;
+    RxBool prBarAct = (Komorka.komorka!.getBool('baPr') ?? false).obs;
     showDialog(
       context: context,
       barrierColor: Colors.transparent,
-      builder: (context) => BackdropFilter(
+      builder: (ctt) => BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: IntrinsicHeight(
           child: Material(
@@ -377,7 +389,7 @@ class _GlaErkState extends State<GlaErk> {
                                           color: Colors.yellow,
                                         )),
                                     TextSpan(
-                                        text: 'more'.toUpperCase(),
+                                        text: 'mode'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize: 32,
                                           fontFamily: 'TitanOne',
@@ -390,100 +402,190 @@ class _GlaErkState extends State<GlaErk> {
                               SizedBox(
                                 height: 26,
                               ),
-                              if (!(Komorka.komorka!.getBool('baPr') ?? false))
-                                Column(
-                                  children: [
-                                    GestureDetector(
-                                      onTap: () {},
-                                      child: Container(
-                                        width: double.infinity,
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 12),
-                                        constraints:
-                                            BoxConstraints(minHeight: 45),
-                                        decoration: BoxDecoration(
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Color.fromRGBO(119, 80, 174, 1),
-                                                Color.fromRGBO(50, 69, 181, 1)
-                                              ],
-                                              begin: Alignment.topCenter,
-                                              end: Alignment.bottomCenter,
+                              Obx(
+                                () => !prBarAct.value
+                                    ? Column(
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () async {
+                                              if (!prBarLo.value &&
+                                                  !prBarAct.value) {
+                                                prBarLo.value = true;
+                                                final barpw =
+                                                    await Apphud.paywalls();
+                                                print(barpw
+                                                    ?.paywalls.first.products!);
+                                                final bartv =
+                                                    await Apphud.purchase(
+                                                  product: barpw
+                                                      ?.paywalls.first.products!
+                                                      .where((bartvbartv) =>
+                                                          bartvbartv
+                                                              .productId ==
+                                                          'premium')
+                                                      .toList()
+                                                      .first,
+                                                );
+                                                if (bartv.error == null) {
+                                                  prBarAct.value = true;
+                                                  Komorka.komorka!
+                                                      .setBool('baPr', true);
+                                                }
+
+                                                prBarLo.value = false;
+                                              }
+                                            },
+                                            child: Container(
+                                              width: double.infinity,
+                                              padding: EdgeInsets.symmetric(
+                                                  vertical: 12),
+                                              constraints:
+                                                  BoxConstraints(minHeight: 45),
+                                              decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                    colors: [
+                                                      Color.fromRGBO(
+                                                          205, 29, 139, 1),
+                                                      Color.fromRGBO(
+                                                          210, 30, 145, 1)
+                                                    ],
+                                                    begin: Alignment.topCenter,
+                                                    end: Alignment.bottomCenter,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(8)),
+                                              alignment: Alignment.center,
+                                              child: Obx(
+                                                () => prBarLo.value
+                                                    ? CupertinoActivityIndicator()
+                                                    : Text(
+                                                        'Buy Premium for 0.99\$'
+                                                            .toUpperCase(),
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                              ),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          'Buy Premium for 0.99\$'
-                                              .toUpperCase(),
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.white,
                                           ),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    GestureDetector(
-                                      onTap: () {},
-                                      child: Container(
-                                        width: double.infinity,
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 12),
-                                        constraints:
-                                            BoxConstraints(minHeight: 45),
-                                        decoration: BoxDecoration(
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Color.fromRGBO(119, 80, 174, 1),
-                                                Color.fromRGBO(50, 69, 181, 1)
-                                              ],
-                                              begin: Alignment.topCenter,
-                                              end: Alignment.bottomCenter,
+                                          SizedBox(
+                                            height: 15,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () async {
+                                              if (!puBarLo.value &&
+                                                  !prBarAct.value) {
+                                                puBarLo.value = true;
+                                                final ApphudComposite restPu =
+                                                    await Apphud
+                                                        .restorePurchases();
+
+                                                bool failPu = true;
+
+                                                if (restPu
+                                                    .purchases.isNotEmpty) {
+                                                  for (final pu
+                                                      in restPu.purchases) {
+                                                    if (pu.productId ==
+                                                        'premium') {
+                                                      prBarAct.value = true;
+                                                      Komorka.komorka!.setBool(
+                                                          'baPr', true);
+                                                      break;
+                                                    }
+                                                  }
+                                                }
+
+                                                if (failPu) {
+                                                  Get.showSnackbar(
+                                                    GetSnackBar(
+                                                      duration: 2000.ms,
+                                                      backgroundColor:
+                                                          Colors.blue,
+                                                      messageText: Center(
+                                                        child: Text(
+                                                          'Purchase is not found',
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+
+                                                puBarLo.value = false;
+                                              }
+                                            },
+                                            child: Container(
+                                              width: double.infinity,
+                                              padding: EdgeInsets.symmetric(
+                                                  vertical: 12),
+                                              constraints:
+                                                  BoxConstraints(minHeight: 45),
+                                              decoration: BoxDecoration(
+                                                  gradient: LinearGradient(
+                                                    colors: [
+                                                      Color.fromRGBO(
+                                                          119, 80, 174, 1),
+                                                      Color.fromRGBO(
+                                                          50, 69, 181, 1)
+                                                    ],
+                                                    begin: Alignment.topCenter,
+                                                    end: Alignment.bottomCenter,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(8)),
+                                              alignment: Alignment.center,
+                                              child: Obx(
+                                                () => puBarLo.value
+                                                    ? CupertinoActivityIndicator()
+                                                    : Text(
+                                                        'Restore Purchase'
+                                                            .toUpperCase(),
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                              ),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          'Restore Purchase'.toUpperCase(),
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.white,
                                           ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                )
-                              else
-                                Container(
-                                  width: double.infinity,
-                                  padding: EdgeInsets.symmetric(vertical: 12),
-                                  constraints: BoxConstraints(minHeight: 45),
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          Color.fromRGBO(209, 30, 144, 1),
-                                          Color.fromRGBO(50, 69, 181, 1)
                                         ],
-                                        begin: Alignment.topCenter,
-                                        end: Alignment.bottomCenter,
+                                      )
+                                    : Container(
+                                        width: double.infinity,
+                                        padding:
+                                            EdgeInsets.symmetric(vertical: 12),
+                                        constraints:
+                                            BoxConstraints(minHeight: 45),
+                                        decoration: BoxDecoration(
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Color.fromRGBO(209, 30, 144, 1),
+                                                Color.fromRGBO(50, 69, 181, 1)
+                                              ],
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8)),
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          'PREMIUM ACTIVATED'.toUpperCase(),
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white,
+                                          ),
+                                        ),
                                       ),
-                                      borderRadius: BorderRadius.circular(8)),
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'PREMIUM ACTIVATED'.toUpperCase(),
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -522,7 +624,7 @@ class _GlaErkState extends State<GlaErk> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      if (mup.value) {
+      if (mup.value && !Disco.discoPl) {
         Disco.goBarMu('mus/disco.mp3');
       }
       rotator = Timer.periodic(Duration(milliseconds: 50), (timer) {
@@ -708,7 +810,7 @@ class _GlaErkState extends State<GlaErk> {
                                 ),
                               ),
                               child: Text(
-                                'Record table'.toUpperCase(),
+                                'RecordS'.toUpperCase(),
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 24,

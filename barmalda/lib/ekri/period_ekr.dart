@@ -197,7 +197,7 @@ class _PeriodEkrState extends State<PeriodEkr> {
                       children: [
                         IntrinsicWidth(
                           child: Container(
-                            width: 188,
+                            //width: 188,
                             clipBehavior: Clip.none,
                             decoration: BoxDecoration(
                               border: Border.all(
@@ -232,6 +232,7 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                           end: Alignment.bottomCenter,
                                         ),
                             ),
+                            padding: EdgeInsets.symmetric(horizontal: 8),
                             child: Opacity(
                               opacity: 0,
                               child: Padding(
@@ -240,11 +241,11 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                 child: Column(
                                   children: [
                                     Container(
-                                      width: 72,
+                                      //width: 72,
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 6),
+                                          vertical: 12),
                                       child: Text(
-                                        '30'.toUpperCase(),
+                                        '30 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w400,
@@ -253,11 +254,11 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       ),
                                     ),
                                     Container(
-                                      width: 72,
+                                      //width: 72,
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 6),
+                                          vertical: 12),
                                       child: Text(
-                                        '60'.toUpperCase(),
+                                        '60 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w400,
@@ -266,11 +267,11 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       ),
                                     ),
                                     Container(
-                                      width: 72,
+                                      //width: 72,
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 6),
+                                          vertical: 12),
                                       child: Text(
-                                        '120'.toUpperCase(),
+                                        '120 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w400,
@@ -279,11 +280,11 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       ),
                                     ),
                                     Container(
-                                      width: 72,
+                                      //width: 72,
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 6),
+                                          vertical: 12),
                                       child: Text(
-                                        '240'.toUpperCase(),
+                                        '240 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w400,
@@ -330,6 +331,8 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       duration: 150.ms,
                                       height: 42,
                                       width: 214,
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 6),
                                       decoration: _selBarSc.value == 30
                                           ? BoxDecoration(
                                               borderRadius:
@@ -344,7 +347,7 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                           : null,
                                       alignment: Alignment.center,
                                       child: Text(
-                                        '30'.toUpperCase(),
+                                        '30 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize:
                                               _selBarSc.value == 30 ? 32 : 24,
@@ -365,6 +368,8 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       duration: 150.ms,
                                       height: 42,
                                       width: 214,
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 6),
                                       decoration: _selBarSc.value == 60
                                           ? BoxDecoration(
                                               borderRadius:
@@ -379,7 +384,7 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                           : null,
                                       alignment: Alignment.center,
                                       child: Text(
-                                        '60'.toUpperCase(),
+                                        '60 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize:
                                               _selBarSc.value == 60 ? 32 : 24,
@@ -400,6 +405,8 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       duration: 150.ms,
                                       height: 42,
                                       width: 214,
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 6),
                                       decoration: _selBarSc.value == 120
                                           ? BoxDecoration(
                                               borderRadius:
@@ -414,7 +421,7 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                           : null,
                                       alignment: Alignment.center,
                                       child: Text(
-                                        '120'.toUpperCase(),
+                                        '120 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize:
                                               _selBarSc.value == 120 ? 32 : 24,
@@ -438,6 +445,8 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                       duration: 150.ms,
                                       height: 42,
                                       width: 214,
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 6),
                                       decoration: _selBarSc.value == 240
                                           ? BoxDecoration(
                                               borderRadius:
@@ -452,7 +461,7 @@ class _PeriodEkrState extends State<PeriodEkr> {
                                           : null,
                                       alignment: Alignment.center,
                                       child: Text(
-                                        '240'.toUpperCase(),
+                                        '240 seconds'.toUpperCase(),
                                         style: TextStyle(
                                           fontSize:
                                               _selBarSc.value == 240 ? 32 : 24,

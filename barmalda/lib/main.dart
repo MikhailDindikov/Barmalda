@@ -10,8 +10,7 @@ import 'package:get/get.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Komorka.leha();
-  //await Komorka.komorka!.setBool('baPr',false);
-  //await Apphud.start(apiKey: 'app_Srxuhpmvr4gMKqLfDH7Gf1uxEatAXo');
+  await Apphud.start(apiKey: 'app_tXwe9DfUuX5xXGCG1a6cPV8xGUtXv2');
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(const MyBarmalda());
