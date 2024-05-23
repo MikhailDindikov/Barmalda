@@ -1,5 +1,29 @@
 import 'package:just_audio/just_audio.dart';
 
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+import 'gavgav/widgets1.dart';
+
 class Disco {
   static bool discoPl = false;
   static AudioPlayer disco = AudioPlayer();
