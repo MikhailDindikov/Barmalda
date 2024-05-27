@@ -685,7 +685,10 @@ class _BarmanEkrState extends State<BarmanEkr> with TickerProviderStateMixin {
   }
 
   void _barFinal() {
-    Komorka.komorka!.setInt(widget.barSec.toString(), barSco.value);
+    if (barSco.value >
+        (Komorka.komorka!.getInt(widget.barSec.toString()) ?? 0)) {
+      Komorka.komorka!.setInt(widget.barSec.toString(), barSco.value);
+    }
     showDialog(
       context: context,
       barrierColor: Colors.transparent,
